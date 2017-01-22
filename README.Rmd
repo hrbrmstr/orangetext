@@ -1,0 +1,57 @@
+---
+output: rmarkdown::github_document
+---
+`orangetext` is an #rstats project to keep track of The 🍊 One's speeches and include 
+some code snippets for text analysis on them.
+
+Gladly accepting PRs for legit new transcripts and more analysis scripts. 
+
+```{r message=FALSE}
+library(ngram)
+library(tidyverse)
+library(magrittr)
+library(ggalt)
+library(hrbrmisc)
+library(stringi)
+library(rprojroot)
+```
+
+Read all the speeches in:
+
+```{r}
+rprojroot::find_rstudio_root_file() %>%
+  file.path("data", "speeches") %>%
+  list.files("*.txt", full.names=TRUE) %>%
+  map(read_lines) %>%
+  flatten_chr() %>%
+  stri_trim_both() %>%
+  discard(equals, "") %>%
+  paste0(collapse=" ") %>%
+  stri_replace_all_regex("[[:space:]]+", " ") %>%
+  preprocess(case="lower", remove.punct=TRUE,
+             remove.numbers=TRUE, fix.spacing=TRUE) -> texts
+```
+
+What have we got:
+
+```{r}
+string.summary(texts)
+```
+
+The 1-grams are kinda useless but this makes a big tibble for 1:8-grams.
+
+```{r}
+map_df(1:8, ~ngram(texts, n=.x) %>%
+         get.phrasetable() %>%
+         tbl_df() %>%
+         rename(words=ngrams) %>%
+         mutate(words=stri_trim_both(words)) %>%
+         mutate(ngram=sprintf("ngrams: %s", .x))) %>%
+  mutate(ngram=factor(ngram, levels=unique(ngram))) -> grams
+
+```
+
+```{r}
+glimpse(grams)
+```
+
