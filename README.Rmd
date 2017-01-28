@@ -1,10 +1,17 @@
 ---
 output: rmarkdown::github_document
 ---
-`orangetext` is an #rstats project to keep track of The 🍊 One's speeches and include 
-some code snippets for text analysis on them.
+`orangetext` is an #rstats project to keep track of The 🍊 One's speeches and include some code snippets for text analysis on them.
 
 Gladly accepting PRs for legit new transcripts and more analysis scripts. 
+
+### Transcripts
+
+```{r echo=FALSE, results='asis'}
+cat(sprintf("- `%s`\n", list.files("data/speeches")))
+```
+
+### Sample code
 
 ```{r message=FALSE}
 library(ngram)
@@ -47,7 +54,8 @@ map_df(1:8, ~ngram(texts, n=.x) %>%
          rename(words=ngrams) %>%
          mutate(words=stri_trim_both(words)) %>%
          mutate(ngram=sprintf("ngrams: %s", .x))) %>%
-  mutate(ngram=factor(ngram, levels=unique(ngram))) -> grams
+  mutate(ngram=factor(ngram, levels=unique(ngram))) %>% 
+  select(ngram, freq, prop, words) -> grams
 
 ```
 
@@ -55,3 +63,18 @@ map_df(1:8, ~ngram(texts, n=.x) %>%
 glimpse(grams)
 ```
 
+```{r}
+filter(grams, ngram=="ngrams: 3")
+```
+
+```{r}
+filter(grams, ngram=="ngrams: 4")
+```
+
+```{r}
+filter(grams, ngram=="ngrams: 5")
+```
+
+```{r}
+filter(grams, ngram=="ngrams: 6")
+```

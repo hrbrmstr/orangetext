@@ -26,6 +26,9 @@ map_df(1:8, ~ngram(texts, n=.x) %>%
          rename(words=ngrams) %>%
          mutate(words=stri_trim_both(words)) %>%
          mutate(ngram=sprintf("ngrams: %s", .x))) %>%
-  mutate(ngram=factor(ngram, levels=unique(ngram))) -> grams
+  mutate(ngram=factor(ngram, levels=unique(ngram))) %>%
+  select(ngram, freq, prop, words) -> grams
 
 grams
+
+filter(grams, ngram=="ngrams: 3")
