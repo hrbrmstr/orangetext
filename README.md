@@ -5,11 +5,15 @@ Gladly accepting PRs for legit new transcripts and more analysis scripts.
 
 ### Transcripts
 
+-   `2016-01-19-presidential-candidacy-anouncement-NewYorkCity-NY.txt`
+-   `2016-08-31-immigration-Phoenix-AZ.txt`
+-   `2016-10-13-addressing-sexual-assault-WestPalmBeach-FL.txt`
 -   `2017-01-20-inaugural.txt`
 -   `2017-01-21-cia.txt`
 -   `2017-01-28-may.txt`
 -   `2017-01-29-weekly-address.txt`
 -   `2017-01-31-gorsuch.txt`
+-   `2017-02-01-black-history-month.txt`
 -   `2017-02-01-blackhistorymonth.txt`
 
 ### Sample code
@@ -32,6 +36,7 @@ rprojroot::find_rstudio_root_file() %>%
   list.files("*.txt", full.names=TRUE) %>%
   map(read_lines) %>%
   flatten_chr() %>%
+  stri_enc_toascii() %>%  
   stri_trim_both() %>%
   discard(equals, "") %>%
   paste0(collapse=" ") %>%
@@ -40,25 +45,973 @@ rprojroot::find_rstudio_root_file() %>%
              remove.numbers=TRUE, fix.spacing=TRUE) -> texts
 ```
 
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
+    ## Warning in stri_enc_toascii(.): invalid UTF-8 codepoint definition. fixing
+
 What have we got:
 
 ``` r
 string.summary(texts)
 ```
 
-    ## Chars:       31208
-    ## Letters:     25375
-    ## Whitespace:  5829
+    ## Chars:       128349
+    ## Letters:     104053
+    ## Whitespace:  23607
     ## Punctuation: 0
     ## Digits:      0
-    ## Words:       5830
+    ## Words:       23608
     ## Sentences:   0
     ## Lines:       1 
-    ## Wordlens:    196 201 252 260 371 447 680 990 1120 1313 
+    ## Wordlens:    722 870 912 1000 1761 1882 2909 3827 4693 5032 
     ##              1 1 1 1 1 1 1 1 1 1 
     ## Senlens:     0 
     ##              10 
-    ## Syllens:     0 2 6 48 206 491 1414 3649 
+    ## Syllens:     0 9 20 186 824 2152 5902 14458 
     ##              3 1 1 1 1 1 1 1
 
 The 1-grams are kinda useless but this makes a big tibble for 1:8-grams.
@@ -78,85 +1031,85 @@ map_df(1:8, ~ngram(texts, n=.x) %>%
 glimpse(grams)
 ```
 
-    ## Observations: 40,023
+    ## Observations: 150,366
     ## Variables: 4
     ## $ ngram <fctr> ngrams: 1, ngrams: 1, ngrams: 1, ngrams: 1, ngrams: 1, ...
-    ## $ freq  <int> 256, 233, 150, 145, 138, 122, 114, 92, 81, 76, 75, 68, 6...
-    ## $ prop  <dbl> 0.043910806, 0.039965695, 0.025728988, 0.024871355, 0.02...
-    ## $ words <chr> "the", "and", "to", "of", "i", "we", "a", "you", "that",...
+    ## $ freq  <int> 990, 908, 646, 487, 465, 427, 391, 358, 302, 301, 294, 2...
+    ## $ prop  <dbl> 0.041934937, 0.038461538, 0.027363606, 0.020628600, 0.01...
+    ## $ words <chr> "the", "and", "to", "of", "a", "i", "we", "that", "you",...
 
 ``` r
 filter(grams, ngram=="ngrams: 3")
 ```
 
-    ## # A tibble: 5,449 × 4
+    ## # A tibble: 20,284 × 4
     ##        ngram  freq         prop               words
     ##       <fctr> <int>        <dbl>               <chr>
-    ## 1  ngrams: 3     8 0.0013726836          one of the
-    ## 2  ngrams: 3     8 0.0013726836   the united states
-    ## 3  ngrams: 3     8 0.0013726836      youre going to
-    ## 4  ngrams: 3     7 0.0012010981  martin luther king
-    ## 5  ngrams: 3     7 0.0012010981           i want to
-    ## 6  ngrams: 3     6 0.0010295127       were going to
-    ## 7  ngrams: 3     6 0.0010295127         going to be
-    ## 8  ngrams: 3     6 0.0010295127 the american people
-    ## 9  ngrams: 3     6 0.0010295127         going to do
-    ## 10 ngrams: 3     5 0.0008579272          and i said
-    ## # ... with 5,439 more rows
+    ## 1  ngrams: 3    28 0.0011861391   the united states
+    ## 2  ngrams: 3    25 0.0010590528         going to be
+    ## 3  ngrams: 3    25 0.0010590528          one of the
+    ## 4  ngrams: 3    21 0.0008896043       were going to
+    ## 5  ngrams: 3    20 0.0008472422          we have to
+    ## 6  ngrams: 3    18 0.0007625180          by the way
+    ## 7  ngrams: 3    16 0.0006777938        not going to
+    ## 8  ngrams: 3    15 0.0006354317          and by the
+    ## 9  ngrams: 3    15 0.0006354317 the american people
+    ## 10 ngrams: 3    15 0.0006354317            a lot of
+    ## # ... with 20,274 more rows
 
 ``` r
 filter(grams, ngram=="ngrams: 4")
 ```
 
-    ## # A tibble: 5,709 × 4
-    ##        ngram  freq         prop                   words
-    ##       <fctr> <int>        <dbl>                   <chr>
-    ## 1  ngrams: 4     5 0.0008580745   dr martin luther king
-    ## 2  ngrams: 4     5 0.0008580745    we will make america
-    ## 3  ngrams: 4     4 0.0006864596     will bring back our
-    ## 4  ngrams: 4     4 0.0006864596      we will bring back
-    ## 5  ngrams: 4     4 0.0006864596         i want to thank
-    ## 6  ngrams: 4     3 0.0005148447     thank you very much
-    ## 7  ngrams: 4     3 0.0005148447      and youre going to
-    ## 8  ngrams: 4     3 0.0005148447      again we will make
-    ## 9  ngrams: 4     3 0.0005148447 bless america thank you
-    ## 10 ngrams: 4     3 0.0005148447        were going to do
-    ## # ... with 5,699 more rows
+    ## # A tibble: 22,076 × 4
+    ##        ngram  freq         prop                    words
+    ##       <fctr> <int>        <dbl>                    <chr>
+    ## 1  ngrams: 4    12 0.0005083669           and by the way
+    ## 2  ngrams: 4     9 0.0003812752       the new york times
+    ## 3  ngrams: 4     9 0.0003812752          we are going to
+    ## 4  ngrams: 4     9 0.0003812752     of the united states
+    ## 5  ngrams: 4     9 0.0003812752       all over the place
+    ## 6  ngrams: 4     9 0.0003812752      thank you thank you
+    ## 7  ngrams: 4     8 0.0003389112     we will make america
+    ## 8  ngrams: 4     8 0.0003389112      we have people that
+    ## 9  ngrams: 4     7 0.0002965473 make america great again
+    ## 10 ngrams: 4     7 0.0002965473          i want to thank
+    ## # ... with 22,066 more rows
 
 ``` r
 filter(grams, ngram=="ngrams: 5")
 ```
 
-    ## # A tibble: 5,779 × 4
-    ##        ngram  freq         prop                       words
-    ##       <fctr> <int>        <dbl>                       <chr>
-    ## 1  ngrams: 5     4 0.0006865774      we will bring back our
-    ## 2  ngrams: 5     3 0.0005149331 god bless america thank you
-    ## 3  ngrams: 5     3 0.0005149331  again we will make america
-    ## 4  ngrams: 5     2 0.0003432887         all the way back to
-    ## 5  ngrams: 5     2 0.0003432887          have to get rid of
-    ## 6  ngrams: 5     2 0.0003432887   you and god bless america
-    ## 7  ngrams: 5     2 0.0003432887         to get you a larger
-    ## 8  ngrams: 5     2 0.0003432887  all on the same wavelength
-    ## 9  ngrams: 5     2 0.0003432887         the way back to the
-    ## 10 ngrams: 5     2 0.0003432887   dr martin luther king but
-    ## # ... with 5,769 more rows
+    ## # A tibble: 22,607 × 4
+    ##        ngram  freq         prop                         words
+    ##       <fctr> <int>        <dbl>                         <chr>
+    ## 1  ngrams: 5     5 0.0002118285            all you have to do
+    ## 2  ngrams: 5     5 0.0002118285        the new york times and
+    ## 3  ngrams: 5     4 0.0001694628 will make america great again
+    ## 4  ngrams: 5     4 0.0001694628          we will vote for the
+    ## 5  ngrams: 5     4 0.0001694628        we will bring back our
+    ## 6  ngrams: 5     4 0.0001694628   movement the likes of which
+    ## 7  ngrams: 5     4 0.0001694628    we will make america great
+    ## 8  ngrams: 5     4 0.0001694628       we have people that are
+    ## 9  ngrams: 5     4 0.0001694628             you have to do is
+    ## 10 ngrams: 5     3 0.0001270971           and i will say this
+    ## # ... with 22,597 more rows
 
 ``` r
 filter(grams, ngram=="ngrams: 6")
 ```
 
-    ## # A tibble: 5,805 × 4
-    ##        ngram  freq         prop                               words
-    ##       <fctr> <int>        <dbl>                               <chr>
-    ## 1  ngrams: 6     2 0.0003433476 way back to the washington monument
-    ## 2  ngrams: 6     2 0.0003433476              we may have to get you
-    ## 3  ngrams: 6     2 0.0003433476             all the way back to the
-    ## 4  ngrams: 6     2 0.0003433476            have to get you a larger
-    ## 5  ngrams: 6     2 0.0003433476     and god bless america thank you
-    ## 6  ngrams: 6     2 0.0003433476     you and god bless america thank
-    ## 7  ngrams: 6     2 0.0003433476               to get rid of isis we
-    ## 8  ngrams: 6     2 0.0003433476     bless you and god bless america
-    ## 9  ngrams: 6     2 0.0003433476             have to get rid of isis
-    ## 10 ngrams: 6     2 0.0003433476       were going to do great things
-    ## # ... with 5,795 more rows
+    ## # A tibble: 22,769 × 4
+    ##        ngram  freq         prop                              words
+    ##       <fctr> <int>        <dbl>                              <chr>
+    ## 1  ngrams: 6     4 1.694700e-04              all you have to do is
+    ## 2  ngrams: 6     4 1.694700e-04   we will make america great again
+    ## 3  ngrams: 6     3 1.271025e-04 make america great again thank you
+    ## 4  ngrams: 6     3 1.271025e-04             you have to do is look
+    ## 5  ngrams: 6     3 1.271025e-04       were going to bring our jobs
+    ## 6  ngrams: 6     3 1.271025e-04       going to bring our jobs back
+    ## 7  ngrams: 6     3 1.271025e-04        to bring our jobs back home
+    ## 8  ngrams: 6     3 1.271025e-04              have to do is look at
+    ## 9  ngrams: 6     3 1.271025e-04           said to me the other day
+    ## 10 ngrams: 6     2 8.473499e-05 it\032s one of the favorite things
+    ## # ... with 22,759 more rows

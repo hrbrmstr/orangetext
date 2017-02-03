@@ -11,6 +11,7 @@ rprojroot::find_rstudio_root_file() %>%
   list.files("*.txt", full.names=TRUE) %>%
   map(read_lines) %>%
   flatten_chr() %>%
+  stri_enc_toascii() %>%
   stri_trim_both() %>%
   discard(equals, "") %>%
   paste0(collapse=" ") %>%
