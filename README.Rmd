@@ -25,7 +25,7 @@ library(rprojroot)
 
 Read all the speeches in:
 
-```{r}
+```{r message=FALSE, warning=FALSE}
 rprojroot::find_rstudio_root_file() %>%
   file.path("data", "speeches") %>%
   list.files("*.txt", full.names=TRUE) %>%
