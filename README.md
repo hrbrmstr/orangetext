@@ -14,9 +14,10 @@ Gladly accepting PRs for legit new transcripts and more analysis scripts.
 -   `2017-01-29-weekly-address.txt`
 -   `2017-01-31-gorsuch.txt`
 -   `2017-02-01-black-history-month.txt`
+-   `2017-02-032-national-prayer.txt`
 -   `2017-02-03-weekly-address.txt`
-
-### Sample code
+-   `2017-02-07-major_cities_chiefs_association_conference`#
+## Sample code
 
 ``` r
 library(ngram)
