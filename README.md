@@ -1,3 +1,7 @@
+# THIS REPO IS NO LONGER NECESSARY AND IS NOT BEING MAINTAINED GIVEN STAFFED RESOURCES SUCH AS <https://factba.se/>
+
+--------
+
 
 `orangetext` is an \#rstats project to keep track of The 🍊 One's speeches and include some code snippets for text analysis on them.
 
